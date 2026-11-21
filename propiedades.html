@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propiedades · Alianza Cinco (prototipo)</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/leaflet.min.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-pagina="propiedades">
+<main class="contenedor">
+  <div class="pagina-titulo">
+    <span class="eyebrow">Propiedades</span>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.2rem)">Encuentra tu próximo hogar</h1>
+    <p style="color:var(--tinta-2)">En la versión final esta lista se llena sola con las propiedades publicadas en EasyBroker.</p>
+  </div>
+
+  <div class="listado">
+    <form class="filtros" id="filtros" onsubmit="return false">
+      <h3>Filtros</h3>
+      <div class="pildoras" role="radiogroup" aria-label="Operación">
+        <input type="radio" name="op" id="f-venta" value="venta"><label for="f-venta">Comprar</label>
+        <input type="radio" name="op" id="f-renta" value="renta"><label for="f-renta">Rentar</label>
+      </div>
+      <label for="f-zona">Zona</label><select id="f-zona" name="zona"></select>
+      <label for="f-tipo">Tipo</label><select id="f-tipo" name="tipo"></select>
+      <label for="f-precio">Precio</label><select id="f-precio" name="precio"></select>
+      <label for="f-rec">Recámaras</label>
+      <select id="f-rec" name="rec">
+        <option value="">Cualquiera</option><option value="1">1 o más</option><option value="2">2 o más</option>
+        <option value="3">3 o más</option><option value="4">4 o más</option>
+      </select>
+      <button type="button" id="limpiar" class="btn btn--borde btn--bloque" style="margin-top:20px">Limpiar filtros</button>
+    </form>
+
+    <div>
+      <div class="barra-listado">
+        <strong id="conteo"></strong>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button type="button" class="btn btn--borde boton-filtros" style="padding:9px 16px">Filtros</button>
+          <div class="vista" role="tablist">
+            <button type="button" class="activo" data-vista="lista">Lista</button>
+            <button type="button" data-vista="mapa">Mapa</button>
+          </div>
+        </div>
+      </div>
+      <div id="resultados"></div>
+      <div id="mapa-listado"></div>
+      <p class="nota-mapa" style="margin-top:10px">El mapa marca la zona aproximada, nunca la dirección exacta.</p>
+    </div>
+  </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

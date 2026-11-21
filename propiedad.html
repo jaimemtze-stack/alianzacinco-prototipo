@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propiedad · Alianza Cinco (prototipo)</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/leaflet.min.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-pagina="propiedad">
+<main class="contenedor">
+  <nav class="migas"><a href="index.html">Inicio</a> / <a href="propiedades.html">Propiedades</a> / <span id="miga"></span></nav>
+
+  <div class="ficha">
+    <div>
+      <div class="galeria">
+        <div class="galeria-pista" id="galeria-pista"></div>
+        <button class="galeria-flecha izq" aria-label="Foto anterior">‹</button>
+        <button class="galeria-flecha der" aria-label="Foto siguiente">›</button>
+        <span class="galeria-contador" id="contador"></span>
+      </div>
+      <div class="miniaturas" id="miniaturas"></div>
+    </div>
+
+    <aside class="ficha-columna-panel" style="grid-row: span 2">
+      <div class="panel-contacto" id="panel"></div>
+    </aside>
+
+    <div>
+      <h1 id="titulo"></h1>
+      <div class="ficha-zona" id="ubicacion"></div>
+      <div class="datos-clave" id="datos"></div>
+
+      <div class="bloque-ficha">
+        <h2>Descripción</h2>
+        <div class="texto-pendiente">
+          <p>Aquí va la descripción pública que Alianza escribe en EasyBroker. Nunca se muestran notas internas,
+            comisiones ni la dirección exacta.</p>
+        </div>
+      </div>
+
+      <div class="bloque-ficha">
+        <h2>Amenidades</h2>
+        <ul class="amenidades" id="amenidades"></ul>
+      </div>
+
+      <div class="bloque-ficha">
+        <h2>Ubicación</h2>
+        <div id="mapa-ficha"></div>
+        <p class="nota-mapa">Ubicación aproximada. La dirección exacta se comparte al agendar tu visita.</p>
+      </div>
+    </div>
+  </div>
+
+  <section style="padding-bottom:80px">
+    <div class="encabezado-seccion"><div><span class="eyebrow">También te pueden interesar</span><h2>Propiedades parecidas</h2></div></div>
+    <div class="rejilla" id="parecidas"></div>
+  </section>
+</main>
+<div class="panel-movil" id="panel-movil"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

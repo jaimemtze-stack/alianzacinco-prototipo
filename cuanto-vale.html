@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Cuánto vale tu propiedad? · Alianza Cinco (prototipo)</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-pagina="cuanto-vale">
+<main class="seccion">
+  <div class="contenedor dos-columnas">
+    <div>
+      <span class="eyebrow">Para propietarios</span>
+      <h1 style="font-size:clamp(2.3rem,5vw,3.4rem)">¿Cuánto vale tu propiedad?</h1>
+      <p style="font-size:1.12rem;color:var(--tinta-2)">Déjanos unos datos y una de nuestras asesoras te contacta con una opinión de valor, sin costo y sin compromiso.</p>
+      <h3 style="margin-top:32px">Así funciona</h3>
+      <ol class="pasos">
+        <li><strong>Nos cuentas de tu propiedad.</strong><br>Solo lo básico, toma un minuto.</li>
+        <li><strong>Te escribimos por WhatsApp.</strong><br>Una asesora revisa tus datos y te contacta.</li>
+        <li><strong>Te damos una opinión de valor</strong><br>con base en lo que se vende y renta en tu zona.</li>
+      </ol>
+      <p><span class="pendiente">Tiempo de respuesta y pasos: por confirmar con Alianza</span></p>
+    </div>
+
+    <div class="caja-blanca">
+      <form class="formulario" id="form-valor">
+        <div>
+          <label>¿Qué quieres hacer?</label>
+          <div class="pildoras" style="display:flex">
+            <input type="radio" name="quiere" id="q-vender" value="vender" checked><label for="q-vender" style="flex:1;text-align:center;margin:0">Vender</label>
+            <input type="radio" name="quiere" id="q-rentar" value="rentar"><label for="q-rentar" style="flex:1;text-align:center;margin:0">Rentar</label>
+          </div>
+        </div>
+        <div class="doble">
+          <div><label for="cv-tipo">Tipo de propiedad</label>
+            <select id="cv-tipo" required><option value="">Elige</option><option>Casa</option><option>Departamento</option><option>Terreno</option><option>Quinta</option><option>Oficina o local</option></select></div>
+          <div><label for="cv-zona">Zona</label><select id="cv-zona" required></select></div>
+        </div>
+        <div class="doble">
+          <div><label for="cv-terreno">m² de terreno</label><input id="cv-terreno" inputmode="numeric" placeholder="Ej. 300"></div>
+          <div><label for="cv-const">m² de construcción</label><input id="cv-const" inputmode="numeric" placeholder="Ej. 250"></div>
+        </div>
+        <div><label for="cv-nombre">Tu nombre</label><input id="cv-nombre" required autocomplete="name"></div>
+        <div><label for="cv-wa">Tu WhatsApp</label><input id="cv-wa" required inputmode="tel" autocomplete="tel" placeholder="10 dígitos"></div>
+        <button class="btn btn--tinta btn--bloque" type="submit">Quiero mi opinión de valor</button>
+        <p style="font-size:.85rem;color:var(--tinta-2);margin:0">Al enviar aceptas nuestro <span class="pendiente">aviso de privacidad (pendiente)</span>.</p>
+      </form>
+      <div class="confirmacion" id="confirmacion">
+        <h3>¡Gracias! Te escribimos pronto</h3>
+        <p style="margin:0">En el prototipo no se envía nada. En la versión final estos datos llegan al sistema como
+          propietario interesado y Alianza recibe el aviso al momento.</p>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guías de zonas · Alianza Cinco (prototipo)</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/leaflet.min.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-pagina="zona">
+<main>
+  <div class="contenedor pagina-titulo" id="titulo-zonas" hidden>
+    <span class="eyebrow">Guías de zonas</span>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.2rem)">¿Dónde quieres vivir?</h1>
+    <p style="color:var(--tinta-2);max-width:620px">Cada guía cuenta cómo es la zona y muestra nuestras propiedades ahí.
+      <span class="pendiente">Zonas y colonias por confirmar con Alianza</span></p>
+  </div>
+  <div id="contenido-zona"></div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
