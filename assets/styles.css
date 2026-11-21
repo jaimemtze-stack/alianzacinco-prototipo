@@ -80,7 +80,7 @@ p { margin: 0 0 1em; }
 
 /* Encabezado */
 .cabecera {
-  position: sticky; top: 0; z-index: 1000;
+  position: sticky; top: 0; z-index: 1100;
   background: rgba(246, 241, 232, .94); backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--linea);
 }
@@ -234,7 +234,7 @@ p { margin: 0 0 1em; }
 
 /* WhatsApp flotante */
 .wa-flotante {
-  position: fixed; right: 20px; bottom: 20px; z-index: 1001; width: 60px; height: 60px; border-radius: 50%;
+  position: fixed; right: 20px; bottom: 20px; z-index: 1101; width: 60px; height: 60px; border-radius: 50%;
   background: var(--wa); display: grid; place-items: center; box-shadow: 0 10px 24px -8px rgba(0, 0, 0, .45);
 }
 .wa-flotante svg { width: 32px; height: 32px; fill: #fff; }
@@ -311,7 +311,7 @@ p { margin: 0 0 1em; }
   .ficha h1 { margin-top: 12px; }
   /* barra fija abajo en celular */
   .panel-movil {
-    display: flex; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 1001;
+    display: flex; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 1101;
     background: var(--blanco); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); box-shadow: 0 -6px 20px -12px rgba(0, 0, 0, .35);
   }
   .panel-movil .btn { flex: 1; padding: 12px 10px; font-size: .95rem; }
