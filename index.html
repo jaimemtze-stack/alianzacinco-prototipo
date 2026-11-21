@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=2">
+  <link rel="stylesheet" href="assets/styles.css?v=3">
 </head>
 <body data-pagina="portada">
 <main>
@@ -25,12 +25,12 @@
         <path d="M0 700 L0 470 L140 400 L230 440 L360 300 L430 360 L520 250 L560 290 L610 230 L700 330 L820 280 L900 350 L1010 260 L1120 360 L1240 320 L1340 390 L1440 360 L1440 700 Z" fill="#B08A4E" opacity=".22"/>
         <path d="M0 700 L0 560 L180 500 L320 545 L470 480 L640 540 L820 490 L990 550 L1160 500 L1300 540 L1440 510 L1440 700 Z" fill="#1E2522" opacity=".55"/>
       </svg>
-      <span class="foto-pendiente-tag">Aquí va una foto propia de Alianza</span>
+      <span class="foto-pendiente-tag">Foto provisional: va una foto propia de Alianza</span>
     </div>
     <div class="contenedor">
       <span class="eyebrow" style="color:var(--dorado-claro)">Inmobiliaria en Monterrey</span>
       <h1>Tu inversión, <em>mi compromiso</em></h1>
-      <p class="hero-sub">Casas, departamentos, terrenos y quintas en venta y renta en la zona sur, San Pedro, Cumbres, Santiago y más.</p>
+      <p class="hero-sub"><span id="total-props"></span> propiedades en venta y renta: casas, departamentos, terrenos y quintas en Carretera Nacional, Santiago, San Pedro y más.</p>
 
       <form class="buscador" id="buscador" action="propiedades.html">
         <div class="pildoras" role="radiogroup" aria-label="Operación">
@@ -49,7 +49,7 @@
   <section class="seccion">
     <div class="contenedor">
       <div class="encabezado-seccion">
-        <div><span class="eyebrow">Propiedades destacadas</span><h2>Seleccionadas por nuestro equipo</h2></div>
+        <div><span class="eyebrow">Propiedades destacadas</span><h2>Seleccionadas por nuestro equipo</h2><p><span class="pendiente">Selección provisional: Alianza elige cuáles</span></p></div>
         <a class="btn btn--borde" href="propiedades.html">Ver todas</a>
       </div>
       <div class="rejilla" id="destacadas"></div>
@@ -61,7 +61,7 @@
     <div class="contenedor">
       <div class="encabezado-seccion">
         <div><span class="eyebrow">Explora por zona</span><h2>Conocemos cada rincón de Monterrey</h2></div>
-        <p>Guías con lo que tiene cada zona y nuestras propiedades ahí. <span class="pendiente">Zonas por confirmar</span></p>
+        <p>Guías con lo que tiene cada zona y nuestras propiedades ahí. <span class="pendiente">Agrupación provisional</span></p>
       </div>
       <div class="zonas" id="zonas"></div>
     </div>
@@ -119,7 +119,7 @@
     </div>
   </section>
 </main>
-<script src="assets/data.js?v=2"></script>
-<script src="assets/app.js?v=2"></script>
+<script src="assets/data.js?v=3"></script>
+<script src="assets/app.js?v=3"></script>
 </body>
 </html>

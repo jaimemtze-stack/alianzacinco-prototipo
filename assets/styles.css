@@ -38,7 +38,7 @@ h3 { font-size: 1.45rem; }
 p { margin: 0 0 1em; }
 
 .contenedor { width: 100%; max-width: var(--ancho); margin: 0 auto; padding: 0 20px; }
-.seccion { padding: 72px 0; }
+.seccion { padding-block: 72px; }
 .seccion--clara { background: var(--blanco); }
 .seccion--tinta { background: var(--tinta); color: var(--hueso); }
 .eyebrow {
@@ -240,7 +240,7 @@ p { margin: 0 0 1em; }
 .wa-flotante svg { width: 32px; height: 32px; fill: #fff; }
 
 /* Listado */
-.pagina-titulo { padding: 48px 0 24px; }
+.pagina-titulo { padding-block: 48px 24px; }
 .listado { display: grid; grid-template-columns: 280px 1fr; gap: 32px; padding-bottom: 72px; }
 .filtros { background: var(--blanco); border-radius: var(--radio); padding: 22px; align-self: start; position: sticky; top: 92px; z-index: 5; box-shadow: var(--sombra); }
 .filtros h3 { font-size: 1.3rem; }
@@ -265,7 +265,7 @@ p { margin: 0 0 1em; }
 /* Ficha */
 .migas { font-size: .9rem; color: var(--tinta-2); padding: 20px 0; }
 .migas a { text-decoration: none; }
-.ficha { display: grid; grid-template-columns: 1fr 380px; gap: 40px; padding-bottom: 72px; }
+.ficha { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 40px; padding-bottom: 72px; }
 .galeria { position: relative; border-radius: var(--radio); overflow: hidden; aspect-ratio: 16 / 10; background: var(--tinta); }
 .galeria-pista { display: flex; height: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .galeria-pista::-webkit-scrollbar { display: none; }
@@ -339,14 +339,33 @@ p { margin: 0 0 1em; }
   background: var(--tinta); color: var(--hueso); display: grid; place-items: center; font: 600 1.2rem var(--serif);
 }
 .caja-blanca { background: var(--blanco); border-radius: 20px; padding: 32px; box-shadow: var(--sombra); }
-@media (max-width: 600px) { .caja-blanca { padding: 22px; } .seccion { padding: 52px 0; } }
+@media (max-width: 600px) { .caja-blanca { padding: 22px; } .seccion { padding-block: 52px; } .zona-tarjeta { aspect-ratio: 4 / 3; } }
 
 .zona-hero { position: relative; color: #fff; min-height: 340px; display: flex; align-items: end; }
 .zona-hero .foto-relleno { position: absolute; inset: 0; }
-.zona-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 20%, rgba(20, 25, 23, .8)); }
+.zona-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(20, 25, 23, .35), rgba(20, 25, 23, .85)); }
 .zona-hero .contenedor { position: relative; z-index: 1; padding-bottom: 40px; padding-top: 80px; }
 .texto-pendiente { border-left: 3px solid var(--dorado); padding: 4px 0 4px 18px; color: var(--tinta-2); }
 
 /* Etiquetas del mapa simplificado */
 .leaflet-tooltip.etiqueta-zona { background: transparent; border: 0; box-shadow: none; font: 600 .78rem var(--sans); color: var(--cafe); }
 .leaflet-tooltip.etiqueta-zona::before { display: none; }
+
+/* Fotos reales de EasyBroker */
+.tarjeta-foto { background: var(--hueso-2); overflow: hidden; }
+.tarjeta-foto img, .zona-tarjeta img, .miniaturas img { width: 100%; height: 100%; object-fit: cover; }
+.tarjeta:hover .tarjeta-foto img { transform: scale(1.03); }
+.tarjeta-foto img { transition: transform .4s ease; }
+.num-fotos { position: absolute; right: 12px; bottom: 12px; background: rgba(0,0,0,.55); color: #fff; font-size: .75rem; padding: 3px 9px; border-radius: 999px; }
+.zona-tarjeta img { position: absolute; inset: 0; }
+.galeria-pista img { width: 100%; height: 100%; object-fit: contain; }
+.hero-foto, .zona-hero-foto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-fondo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(20,25,23,.88) 0%, rgba(20,25,23,.6) 55%, rgba(20,25,23,.35) 100%); }
+.hero-fondo svg { display: none; }
+.foto-pendiente-tag { z-index: 1; }
+.zona-hero { background: var(--tinta); }
+.descripcion { white-space: pre-line; color: var(--tinta-2); }
+.panel-asesora .asesora-foto { border-style: solid; font: 600 1.1rem var(--serif); }
+
+.ficha > * { min-width: 0; }
+.galeria-pista > div { background: #111 center / contain no-repeat; }
