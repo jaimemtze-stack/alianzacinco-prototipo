@@ -66,11 +66,10 @@
     ];
     const saludo = waLink("Hola, vi la página de Alianza Cinco y me gustaría más información.");
     document.body.insertAdjacentHTML("afterbegin", `
-      <div class="aviso-prototipo"><strong>Prototipo para revisión.</strong> Las propiedades son las publicadas en EasyBroker; logo y textos son provisionales.</div>
+      <div class="aviso-prototipo"><strong>Prototipo para revisión.</strong> Las propiedades son las publicadas en EasyBroker; textos y algunas fotos son provisionales.</div>
       <header class="cabecera"><div class="contenedor">
         <a class="logo" href="index.html" aria-label="Alianza Cinco, inicio">
-          <span class="logo-marca">A5</span>
-          <span class="logo-texto">Alianza Cinco<small>Inmobiliaria · Monterrey</small></span>
+          <img class="logo-img logo-img--oscuro" src="assets/logo.jpg?v=4" alt="Alianza Cinco Inmobiliaria">
         </a>
         <button class="boton-menu" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
         <nav class="menu">
@@ -83,7 +82,7 @@
     document.body.insertAdjacentHTML("beforeend", `
       <footer class="pie"><div class="contenedor">
         <div>
-          <div class="logo"><span class="logo-marca">A5</span><span class="logo-texto">Alianza Cinco<small>Inmobiliaria · Monterrey</small></span></div>
+          <img class="logo-img logo-img--claro" src="assets/logo.jpg?v=4" alt="Alianza Cinco Inmobiliaria">
           <p style="margin-top:16px;opacity:.85">${esc(C.lema)}</p>
         </div>
         <div>
@@ -277,7 +276,7 @@
         <div class="panel-clave">Clave: <strong>${esc(p.clave)}</strong></div>
         <a class="btn btn--wa btn--bloque" target="_blank" rel="noopener" href="${waLink(mensajePropiedad(p))}">${ICONO_WA} Preguntar por WhatsApp</a>
         <a class="btn btn--borde btn--bloque" target="_blank" rel="noopener" href="${waLink(msgVisita)}">Agendar visita</a>
-        <div class="panel-asesora"><div class="asesora-foto">A5</div>
+        <div class="panel-asesora"><div class="asesora-foto"><img src="assets/logo.jpg?v=4" alt="" class="logo-img--oscuro" style="width:44px"></div>
           <div><small>Te atiende</small><strong>Equipo Alianza Cinco</strong><small><span class="pendiente">¿asesora por propiedad?</span></small></div></div>
         <div class="compartir">¿Se la quieres enseñar a alguien?<br>
           <a target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(`${p.titulo} — ${precioCorto(p.precios[0])}\n${location.href}`)}">Mándasela por WhatsApp</a></div>`;

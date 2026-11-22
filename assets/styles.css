@@ -369,3 +369,11 @@ p { margin: 0 0 1em; }
 
 .ficha > * { min-width: 0; }
 .galeria-pista > div { background: #111 center / contain no-repeat; }
+
+/* Logo real (JPG blanco sobre negro): se "recorta" el fondo con modos de mezcla */
+.logo-img { display: block; height: 64px; width: auto; }
+.logo-img--oscuro { filter: invert(1); mix-blend-mode: multiply; }   /* sobre fondo claro: logo oscuro */
+.logo-img--claro { mix-blend-mode: screen; height: 96px; }             /* sobre fondo oscuro: logo blanco */
+.cabecera .contenedor { height: 76px; }
+@media (max-width: 900px) { .menu { inset: 76px 0 auto 0; } .logo-img { height: 52px; } }
+.panel-asesora .asesora-foto { overflow: hidden; background: var(--blanco); }
